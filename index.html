@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="ur" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#173B35"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><title>عرفان العلوم میراث کیلکولیٹر</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Amiri&display=swap" rel="stylesheet">
+<style>
+:root{--g:#173B35;--gd:#F0D69A;--bg:#fff;--fg:#173B35;--c:#f6f1e1;--ln:#d9c88f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1f1c;--fg:#f3ead2;--c:#173B35;--ln:#3a5c54}}
+:root[data-theme="dark"]{--bg:#0e1f1c;--fg:#f3ead2;--c:#173B35;--ln:#3a5c54}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/2.1 "Noto Nastaliq Urdu","Amiri",serif}
+header{background:var(--g);color:var(--gd);padding:10px 14px;text-align:center;border-bottom:3px solid var(--gd)}
+header h1{margin:0;font-size:22px}header small{color:#fff;font-size:12px}
+main{max-width:860px;margin:auto;padding:10px}
+.card{background:var(--c);border:1px solid var(--ln);border-radius:10px;padding:8px 12px;margin:10px 0}
+h2{font-size:17px;margin:4px 0;color:var(--fg);border-bottom:1px solid var(--ln)}
+.row{display:flex;justify-content:space-between;align-items:center;padding:2px 0}
+button,select,input{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--g);border-radius:8px;padding:2px 10px}
+.st{display:inline-flex;direction:ltr;align-items:center;border:1.5px solid var(--g);border-radius:10px;overflow:hidden;background:var(--bg)}.st button{border:0;border-radius:0;width:42px;height:38px;font-size:22px;line-height:1;padding:0;background:var(--g);color:var(--gd)}.st b{min-width:46px;text-align:center;font-family:system-ui,sans-serif}.on{background:var(--g);color:var(--gd)}
+.pri{background:var(--g);color:var(--gd);width:100%;padding:6px;font-size:18px;margin:6px 0}
+.tabs{display:flex;gap:6px}.tabs button{flex:1}
+.w{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid var(--ln);padding:2px 6px;text-align:center;white-space:nowrap}th{background:var(--g);color:var(--gd)}
+.err{background:#fde8e6;color:#8a1c12;padding:6px 10px;border-radius:8px;margin:6px 0}.warn{background:#fff4cf;color:#5a4300;padding:6px 10px;border-radius:8px;margin:6px 0;font-size:14px}
+.ok{color:#1b7a3a}.bad{color:#b3261e}.sc{font-size:14px}
+@media print{.np{display:none!important}body{background:#fff;color:#000}}
+</style></head><body>
+<header><h1>عرفان العلوم میراث کیلکولیٹر</h1><small>علمی نگرانی: مفتی محمد سہیل البازی &nbsp;|&nbsp; فقہِ حنفی</small></header>
+<main>
+<div class="tabs np"><button class="on" onclick="tab(0)">حساب</button><button onclick="tab(2)">حوالہ جات و حدود</button></div>
+
+<section id="t0">
+<div class="card np"><div class="row"><span>مالِ ترکہ (روپے، تجہیز و تکفین، قرض و وصیت کے بعد)</span><input id="est" type="number" min="0" step="0.01" value="1000000" style="width:130px"></div></div>
+<div id="list" class="np"></div>
+
+<div id="msg" class="np"></div>
+<button class="pri np" onclick="run()">حساب کریں</button>
+<button class="np" style="margin:4px 0" onclick="c={};msg('');document.getElementById('out').innerHTML='';draw()">سب صاف کریں</button><div id="out"></div>
+<button class="np" onclick="sh()" style="width:100%;margin-bottom:6px">متن شیئر / کاپی کریں</button><button class="np" onclick="pr()" style="width:100%">پرنٹ / PDF محفوظ کریں</button>
+</section>
+
+<section id="t2" hidden><div class="card sc">
+<h2>حوالہ جات (عنوانات؛ جلد و صفحہ تصدیق شدہ نہیں، اس لیے درج نہیں)</h2>
+<p>السراجی فی المیراث و شرحہا؛ الفتاویٰ الہندیہ کتاب الفرائض؛ ردالمحتار کتاب الفرائض؛ بدائع الصنائع کتاب الفرائض؛ المبسوط للسرخسی کتاب الفرائض؛ الہدایہ کتاب الفرائض۔</p>
+<p><b>علمی منظوری کی حیثیت:</b> کسی قاعدے کا مستند مفتی کی جانب سے جائزہ نہیں ہوا۔ نتائج استعمال سے پہلے ماہرِ فرائض سے تصدیق لازم ہے۔</p>
+<h2>نافذ شدہ اصول</h2>
+<p>اصحابِ فروض، عصبات بنفسہ/بالغیر/مع الغیر، حجبِ حرمان و نقصان، عول، رد، تصحیح (تماثل/توافق/تباین کی بنیاد پر)، عمریتین، دادا کا بھائی بہنوں کو محجوب کرنا (قولِ امام ابوحنیفہؒ)، مسئلہ مشترکہ۔ تمام حساب BigInt کسور سے۔</p>
+<h2>غیر نافذ / علمی جائزہ درکار</h2>
+<p>حمل، مفقود، خنثیٰ مشکل، غرقیٰ و ہدمیٰ، مناسخہ، ذوی الارحام (رد صرف زوجین پر بچے تو مسئلہ روک دیا جاتا ہے)، پوتے/پوتی سے نیچے نسل، دادا کی ماں وغیرہ دور کی جدات، موانعِ ارث (قتل، غلامی، اختلافِ دین) کی خود کار جانچ۔ بھتیجوں/چچوں کی صورتوں کی مکمل درجہ بندی کی تصدیق باقی ہے۔</p>
+<p><a href="privacy.html" style="color:inherit">پرائیویسی پالیسی</a></p><p>پرائیویسی: تمام حساب آپ کے براؤزر میں ہوتا ہے؛ کوئی ڈیٹا سرور کو نہیں جاتا۔</p></div></section>
+</main>
+<script>
+const G=[['زوجین',[['H','شوہر',1],['W','بیوی',4]]],['اصول',[['F','والد',1],['GF','دادا (صحیح)',1],['M','والدہ',1],['GMp','دادی (باپ کی ماں)',1],['GMm','نانی (ماں کی ماں)',1]]],['فروع',[['S','بیٹا',30],['D','بیٹی',30],['SS','پوتا',30],['SD','پوتی',30]]],['بھائی بہن',[['FB','حقیقی بھائی',30],['FS','حقیقی بہن',30],['CB','علاتی بھائی',30],['CS','علاتی بہن',30],['UB','اخیافی بھائی',30],['US','اخیافی بہن',30]]],['دیگر عصبات',[['FBS','حقیقی بھائی کا بیٹا',30],['CBS','علاتی بھائی کا بیٹا',30],['FU','حقیقی چچا',30],['CU','علاتی چچا',30],['FUS','حقیقی چچا کا بیٹا',30],['CUS','علاتی چچا کا بیٹا',30]]]];
+const N={},MX={};G.forEach(g=>g[1].forEach(h=>{N[h[0]]=h[1];MX[h[0]]=h[2]}));
+const SPL=['حمل (پیٹ میں بچہ)','مفقود الخبر وارث','خنثیٰ مشکل','غرقیٰ/ہدمیٰ (ایک ساتھ وفات)','مناسخہ (وارث کی وفات ابھی تقسیم سے پہلے)','پوتے/پوتی کی اولاد یا نیچے کی نسل','دور کی جدات / ذوی الارحام'];
+let c={};
+// ---- exact fractions
+const gcd=(a,b)=>{a=a<0n?-a:a;b=b<0n?-b:b;while(b){[a,b]=[b,a%b]}return a};
+const lcm=(a,b)=>a/gcd(a,b)*b;
+const Fr=(n,d=1n)=>{n=BigInt(n);d=BigInt(d);if(d<0n){n=-n;d=-d}const g=gcd(n,d)||1n;return{n:n/g,d:d/g}};
+const add=(a,b)=>Fr(a.n*b.d+b.n*a.d,a.d*b.d),mul=(a,b)=>Fr(a.n*b.n,a.d*b.d),dv=(a,b)=>Fr(a.n*b.d,a.d*b.n),sub=(a,b)=>add(a,Fr(-b.n,b.d));
+const Z=Fr(0),O=Fr(1),fs=f=>f.d===1n?String(f.n):f.n+'/'+f.d;
+// ---- engine
+function calc(c,sex){
+ const g=k=>c[k]||0,e={},B=[],T={};Object.keys(MX).forEach(k=>e[k]=g(k));
+ const blk=(ks,why)=>ks.forEach(k=>{if(e[k]>0){B.push([k,why]);e[k]=0}});
+ const put=(k,f,w)=>{if(e[k]>0)T[k]={f,t:'فرض',w}};
+ const mD=g('S')+g('SS')>0,dsc=g('S')+g('D')+g('SS')+g('SD')>0,anc=g('F')+g('GF')>0;
+ const sibs=['FB','FS','CB','CS','UB','US'].reduce((a,k)=>a+g(k),0);
+ if(g('S'))blk(['SS','SD'],'بیٹے کی موجودگی (حجبِ حرمان)');else if(g('D')>=2&&!g('SS'))blk(['SD'],'دو یا زائد بیٹیوں کی موجودگی');
+ if(g('F'))blk(['GF','GMp'],'باپ کی موجودگی');
+ if(g('M'))blk(['GMp','GMm'],'ماں کی موجودگی');
+ const AG=['FB','FS','CB','CS','FBS','CBS','FU','CU','FUS','CUS'];
+ if(anc)blk(AG,g('F')?'باپ کی موجودگی':'دادا کی موجودگی (قولِ امام ابوحنیفہؒ)');else if(mD)blk(AG,'بیٹے/پوتے کی موجودگی');
+ if(dsc||anc)blk(['UB','US'],'اولاد یا باپ/دادا کی موجودگی');
+ const femD=e.D+e.SD>0,fullA=e.FB>0||(e.FS>0&&femD);
+ if(fullA)blk(['CB','CS','FBS','CBS','FU','CU','FUS','CUS'],'حقیقی بہن بھائیوں (عصبہ) کی موجودگی');
+ const consA=!fullA&&(e.CB>0||(e.CS>0&&femD&&!e.FS));
+ if(!fullA&&e.FS>=2&&!e.CB)blk(['CS'],'دو یا زائد حقیقی بہنوں کی موجودگی');
+ if(consA)blk(['FBS','CBS','FU','CU','FUS','CUS'],'علاتی بہن بھائیوں (عصبہ) کی موجودگی');
+ const low=['FBS','CBS','FU','CU','FUS','CUS'],fl=low.find(k=>e[k]>0);
+ if(fl)blk(low.filter(k=>k!=fl),'قریب تر عصبہ کی موجودگی');
+ // fixed shares
+ put('H',dsc?Fr(1,4):Fr(1,2),dsc?'اولاد کے ساتھ ربع':'اولاد نہ ہو تو نصف');
+ put('W',dsc?Fr(1,8):Fr(1,4),dsc?'اولاد کے ساتھ ثمن (سب بیویوں میں مشترک)':'ربع (سب بیویوں میں مشترک)');
+ const sp=e.H?(dsc?Fr(1,4):Fr(1,2)):e.W?(dsc?Fr(1,8):Fr(1,4)):Z;
+ if(e.M){if(dsc||sibs>=2)put('M',Fr(1,6),'سدس (اولاد یا دو+ بہن بھائی)');else if(g('F')&&(e.H||e.W))put('M',mul(sub(O,sp),Fr(1,3)),'ثلثِ باقی (عمریتین)');else put('M',Fr(1,3),'ثلث')}
+ const P=e.F?'F':e.GF?'GF':null;
+ if(P&&dsc)put(P,Fr(1,6),'سدس');
+ const gm=e.GMm+e.GMp;['GMm','GMp'].forEach(k=>put(k,Fr(1,6*Math.max(gm,1)),'سدس (جدات میں مشترک)'));
+ if(!e.S&&e.D)put('D',e.D==1?Fr(1,2):Fr(2,3),e.D==1?'نصف':'ثلثان (مشترک)');
+ if(!e.S&&!e.SS&&e.SD){if(!e.D)put('SD',e.SD==1?Fr(1,2):Fr(2,3),e.SD==1?'نصف':'ثلثان (مشترک)');else if(e.D==1)put('SD',Fr(1,6),'سدس تکملۃً للثلثین')}
+ if(!fullA&&e.FS)put('FS',e.FS==1?Fr(1,2):Fr(2,3),e.FS==1?'نصف':'ثلثان (مشترک)');
+ if(!fullA&&!consA&&e.CS){if(!e.FS)put('CS',e.CS==1?Fr(1,2):Fr(2,3),e.CS==1?'نصف':'ثلثان (مشترک)');else if(e.FS==1)put('CS',Fr(1,6),'سدس تکملۃً للثلثین')}
+ const un=e.UB+e.US;if(un){const tot=un==1?Fr(1,6):Fr(1,3);['UB','US'].forEach(k=>put(k,mul(tot,Fr(e[k],un)),un==1?'سدس':'ثلث (برابر تقسیم)'))}
+ // residuary
+ let A=e.S?[['S',2],['D',1]]:e.SS?[['SS',2],['SD',1]]:P?[[P,1]]:fullA?[['FB',2],['FS',1]]:consA?[['CB',2],['CS',1]]:fl?[[fl,1]]:[];
+ A=A.filter(([k])=>e[k]>0);
+ let sum=Z;for(const k in T)sum=add(sum,T[k].f);
+ let asl0=Object.values(T).reduce((a,x)=>lcm(a,x.f.d),1n);
+ const rem=sub(O,sum);let aw=null,ra=false;
+ if(A.length){const tu=A.reduce((a,[k,u])=>a+u*e[k],0);if(!Object.keys(T).length)asl0=BigInt(tu);A.forEach(([k,u])=>{const f=rem.n>0n?mul(rem,Fr(u*e[k],tu)):Z;
+  if(T[k]){T[k].f=add(T[k].f,f);T[k].t='فرض + عصبہ';T[k].w+=' + باقی'}else T[k]={f,t:k=='D'||k=='SD'||k=='FS'||k=='CS'?'عصبہ بالغیر/مع الغیر':'عصبہ بنفسہ',w:rem.n>0n?'باقی مال':'مقررہ حصوں سے مال ختم'}})}
+ if(sum.n>sum.d){aw={from:asl0,to:sum.n*asl0/sum.d};for(const k in T)T[k].f=dv(T[k].f,sum)}
+ else if(!A.length){
+  const rk=Object.keys(T).filter(k=>k!='H'&&k!='W');
+  if(!Object.keys(T).length)return{err:'کوئی قابلِ وراثت وارث نہیں؛ ذوی الارحام/بیت المال کا مسئلہ ہے۔ علمی جائزہ درکار۔'};
+  if(rem.n>0n){if(!rk.length)return{err:'صرف زوجین بچتے ہیں اور باقی مال کا مسئلہ ذوی الارحام کا ہے۔ یہاں حساب نہیں کیا جا سکتا؛ مفتی سے رجوع کریں۔'};
+   let rs=Z;rk.forEach(k=>rs=add(rs,T[k].f));const ra0=sub(O,sub(sum,rs));rk.forEach(k=>T[k].f=mul(T[k].f,dv(ra0,rs)));ra=true}}
+ // tasheeh
+ const ks=Object.keys(T).filter(k=>T[k].f.n>0n);
+ const D0=ks.reduce((a,k)=>lcm(a,T[k].f.d),1n),A1=aw?aw.to:ra?D0:lcm(asl0,D0);let m=1n;
+ ks.forEach(k=>{const u=T[k].f.n*A1/T[k].f.d,n=BigInt(e[k]);m=lcm(m,n/gcd(n,u))});
+ ks.forEach(k=>{const u=T[k].f.n*A1/T[k].f.d;T[k].u=u;T[k].h=u*m/BigInt(e[k])});
+ return{T,B,aw,ra,asl0,A1,m,corr:A1*m,e}}
+// ---- UI
+function draw(){document.getElementById('list').innerHTML=G.map(([t,hs])=>`<div class="card"><h2>${t}</h2>`+hs.map(([k,n,mx])=>`<div class="row"><span>${n}</span>`+(mx==1?`<button class="${c[k]?'on':''}" onclick="tg('${k}')">${c[k]?'موجود':'نہیں'}</button>`:`<span class="st"><button onclick="ch('${k}',1)">+</button><b>${c[k]||0}</b><button onclick="ch('${k}',-1)">−</button></span>`)+`</div>`).join('')+'</div>').join('');
+}
+function tg(k){c[k]=c[k]?0:1;if(k=='H'&&c.H)c.W=0;draw()}
+function ch(k,d){const v=(c[k]||0)+d;if(v>MX[k]){msg('بیویوں کی تعداد چار سے زائد نہیں ہو سکتی۔')}else{msg('');c[k]=Math.max(0,v);if(k=='W'&&c.W>0)c.H=0}draw()}
+function msg(t){document.getElementById('msg').innerHTML=t?`<div class="err">${t}</div>`:''}
+function tab(i){[0,2].forEach(j=>document.getElementById('t'+j).hidden=j!=i);document.querySelectorAll('.tabs button').forEach((b,j)=>b.className=[0,2][j]==i?'on':'')}
+let lastTxt='';
+function run(){
+ msg('');const o=document.getElementById('out');o.innerHTML='';
+ const est=parseFloat(document.getElementById('est').value);
+ if(!(est>=0))return msg('مالِ ترکہ درست (صفر یا زائد) درج کریں۔');
+ if(!Object.keys(MX).some(k=>c[k]>0))return msg('کم از کم ایک وارث منتخب کریں۔');
+ if(c.H&&c.W)return msg('شوہر اور بیویاں ایک ساتھ منتخب نہیں ہو سکتے۔');
+ const r=calc(c,'');if(r.err)return o.innerHTML=`<div class="warn">⚠ ${r.err}</div>`;
+ const sc=false,P=BigInt(Math.round(est*100));
+ const ks=Object.keys(r.T).filter(k=>r.T[k].f.n>0n);
+ let q={},rm=[];ks.forEach(k=>{const f=r.T[k].f,x=P*f.n;q[k]=x/f.d;rm.push([k,x%f.d,f.d])});
+ let left=P;ks.forEach(k=>left-=q[k]);
+ rm.sort((a,b)=>{const l=a[1]*b[2],rr=b[1]*a[2];return l<rr?1:l>rr?-1:0});
+ for(let i=0;i<Number(left);i++)q[rm[i][0]]+=1n;
+ const money=v=>(Number(v)/100).toLocaleString('en-US',{minimumFractionDigits:2});
+ const base=r.aw?r.aw.to:r.ra?r.A1:r.asl0;
+ const st=[`اصل مسئلہ <b>${r.asl0}</b>`];if(r.aw)st.push(`عول <b>${r.aw.to}</b>`);if(r.ra)st.push(`رد <b>${r.A1}</b>`);if(r.corr!=base)st.push(`تصحیح <b>${r.corr}</b>`);
+  let rows='',tot=0n,txt=[`میراث کیلکولیٹر | ترکہ: ${money(P)}`,st.join(' ← ').replace(/<\/?b>/g,''),'ورثاء | عددی حصے | فیصدی حصے | رقم'];
+ const ord=[];
+ G.forEach(g=>g[1].forEach(([k,n])=>{const t=r.T[k];if(!t)return;ord.push(k);const z=t.f.n==0n,cn=r.e[k];
+  const nm=n+(cn>1?' ('+cn+')':''),sh=z?'0':String(t.u*r.m)+(cn>1?` (فی کس ${t.h})`:''),
+  pc=(Number(t.f.n)*100/Number(t.f.d)).toFixed(2)+'%',am=z?'0.00':money(q[k]);
+  rows+=`<tr><td>${nm}</td><td>${sh}</td><td>${pc}</td><td>${am}</td></tr>`;if(!z)tot+=q[k];txt.push(`${nm} | ${sh} | ${pc} | ${am}`)}));
+ let h=`<div class="card" style="text-align:center;font-size:19px"><div class="sc">کل ترکہ: ${money(P)}</div>${st.join(' ← ')}</div>`;
+ h+=`<div class="card w"><table><tr><th>ورثاء</th><th>عددی حصے</th><th>فیصدی حصے</th><th>رقم</th></tr>${rows}<tr><th>کل</th><th>${r.corr}</th><th>100%</th><th>${money(tot)}</th></tr></table></div>`;
+ const bl=r.B.map(([k,w])=>`${N[k]} (${w})`);
+ h+=`<div class="card sc">${bl.length?'<b>محروم ورثاء:</b> '+bl.join('؛ ')+'<br>':''}${tot==P?'<span class="ok">رقم کا مجموعہ ترکہ کے برابر ✓</span>':'<span class="bad">رقم میں فرق!</span>'}${left>0n?` &nbsp; (پیسوں کی ایڈجسٹمنٹ: ${left} پیسہ)`:''}</div>`;
+ if(bl.length)txt.push('محروم: '+bl.join('؛ '));
+ if(sc)h+=`<div class="card w sc"><h2>علمی تفصیل</h2><table><tr><th>وارث</th><th>شرعی حیثیت</th><th>حصہ / اصول</th></tr>${ord.map(k=>`<tr><td>${N[k]}</td><td>${r.T[k].t}</td><td>${r.T[k].w}</td></tr>`).join('')}</table><p>دادا کے ساتھ بھائی بہن: قولِ امام ابوحنیفہؒ پر دادا باپ کی طرح ہے۔ عمریتین صرف باپ کی صورت میں۔</p></div>`;
+ h+='<div class="warn">یہ نتیجہ مستند مفتی/ماہرِ فرائض کی تصدیق کے بغیر حتمی نہیں۔ علمی نگرانی: مفتی محمد سہیل البازی (منظوری کا دعویٰ نہیں)۔</div>';
+ lastTxt=txt.join('\n');o.innerHTML=h;o.scrollIntoView({behavior:'smooth'})}
+async function sh(){if(!lastTxt)return msg('پہلے حساب کریں۔');try{if(navigator.share){await navigator.share({title:'میراث کیلکولیٹر',text:lastTxt});return}}catch(e){}
+ try{await navigator.clipboard.writeText(lastTxt);document.getElementById('msg').innerHTML='<div class="warn">متن کاپی ہو گیا۔</div>'}catch(e){msg('کاپی ممکن نہیں؛ نتیجہ دستی طور پر نقل کریں۔')}}
+function pr(){try{window.print()}catch(e){}document.getElementById('msg').innerHTML='<div class="warn">اگر پرنٹ ونڈو نہ کھلے تو یہ صفحہ براؤزر (Chrome/Safari) میں کھولیں اور مینو سے Print / Save as PDF منتخب کریں، یا "متن شیئر / کاپی" استعمال کریں۔</div>'}
+// ---- tests
+draw();
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script></body></html>
