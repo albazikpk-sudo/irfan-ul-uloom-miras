@@ -1,9 +1,10 @@
 {
   "name": "عرفان العلوم میراث کیلکولیٹر",
   "short_name": "عرفان میراث",
-  "description": "فقہِ حنفی کے مطابق وراثت کا حساب",
+  "description": "Hanafi Islamic Inheritance Calculator by Irfan al-Uloom. Calculate Shariah-compliant inheritance shares according to Hanafi Fiqh.",
   "lang": "ur",
   "dir": "rtl",
+  "id": "./",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
